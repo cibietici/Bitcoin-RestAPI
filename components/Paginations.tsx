@@ -8,11 +8,10 @@ export default function Pagination(props: {
   ) {
   
   const {current, maxLimit, totItems, setCurrentPage} = props
-  const paginations: Array<number> =[]
-  
-  for(let i=1; i < Math.ceil(totItems/maxLimit); i++)  {
-    paginations.push(i)
-  }
+  const takes: number = Math.ceil(totItems/maxLimit)
+
+  let paginations: Array<number> = Array
+    .from({ length: takes }, (value: number, index: number) => index + 1);
 
   return <ul>
       {
@@ -22,7 +21,7 @@ export default function Pagination(props: {
               href="#" 
               className={pagination === current ? styles.highlight : styles.pagination}
               onClick={() => setCurrentPage(pagination)}>
-                {pagination}
+                { pagination }
             </a>
           </li>
         })

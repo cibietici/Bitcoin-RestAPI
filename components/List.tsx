@@ -16,7 +16,7 @@ export default function List() {
   if (error) {
     return <Error error={error.message} />
   }
-  if (data === undefined) {
+  if (!data) {
     return <Loader />
   }
   const endSlice = currentPage * maxLimit
