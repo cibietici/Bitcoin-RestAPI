@@ -1,21 +1,31 @@
-export default function Pagination(props) {
+import styles from '@/styles/Home.module.css'
+
+export default function Pagination(props: {
+    current: number, 
+    maxLimit: number, 
+    totItems: number, 
+    setCurrentPage: Function}
+  ) {
   
-  const {current, maxlimit, totItems, setCurrentPage} = props
+  const {current, maxLimit, totItems, setCurrentPage} = props
+  const paginations: Array<number> =[]
+  
+  for(let i=1; i < Math.ceil(totItems/maxLimit); i++)  {
+    paginations.push(i)
+  }
+
   return <ul>
-        <li>
-          <a href="#" onClick={() => setCurrentPage(1)}>1</a>
-        </li>
-        <li>
-          <a href="#" onClick={() => setCurrentPage(2)}>2</a>
-        </li>
-        <li>
-          <a href="#" onClick={() => setCurrentPage(3)}>3</a>
-        </li>
-        <li>
-          <a href="#" onClick={() => setCurrentPage(4)}>4</a>
-        </li>
-        <li>
-          <a href="#" onClick={() => setCurrentPage(5)}>5</a>
-        </li>
+      {
+        paginations.map((pagination: number) => {
+          return <li key={pagination}>
+            <a 
+              href="#" 
+              className={pagination === current ? styles.highlight : styles.pagination}
+              onClick={() => setCurrentPage(pagination)}>
+                {pagination}
+            </a>
+          </li>
+        })
+      }
     </ul>
 }

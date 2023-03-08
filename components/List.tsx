@@ -1,9 +1,10 @@
-import Pagination from "./Paginations";
+import Pagination from './Paginations'
 import useSWR from 'swr'
-import Loader from "./Loader";
-import Error from "./Error";
-import { useState } from "react";
-import CoinItem from "./CoinItem";
+import Loader from './Loader'
+import Error from './Error'
+import { useState } from 'react'
+import CoinItem from './CoinItem'
+import styles from '@/styles/Home.module.css'
 
 export default function List() {
   const endPoint = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=100&api_key=${process.env.APIKEY}`
@@ -24,15 +25,15 @@ export default function List() {
   const reducedData = data?.Data?.Data.slice(startSlice, endSlice)
 
   return <>
-      <ul>
-        {reducedData.map((item: any) => <CoinItem 
-          coin={item} 
-          key={item.high} />) }
-      </ul>
-      <Pagination 
-        current={currentPage} 
-        maxLimit={maxLimit} 
-        totItems={data?.Data?.Data.length} 
-        setCurrentPage={setCurrentPage} />
+    <ul>
+      {reducedData.map((item: any) => <CoinItem 
+        coin={item} 
+        key={item.high} />) }
+    </ul>
+    <Pagination 
+      current={currentPage} 
+      maxLimit={maxLimit} 
+      totItems={data?.Data?.Data.length} 
+      setCurrentPage={setCurrentPage} />
     </>
 }

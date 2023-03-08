@@ -6,8 +6,8 @@ export default async function fetchData(url: string) {
   } else if (response.status === 404) {
     throw new Error('Error with getting data!')
   } else if (response.status > 499) {
-    throw new Error('Server not responding')
+    throw new Error('Server not responding!')
   } else {
-    throw new Error('Something went wrong')
+    throw new Error('Something went wrong!')
   }
 }
