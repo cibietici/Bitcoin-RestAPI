@@ -5,6 +5,9 @@ export default function CoinItem(props: any) {
 
   return <li>
       <span>
+        {convertDate(props.coin.time)}
+      </span>
+      <span>
         <Image src='/down.svg' width={20} height={12} alt='' aria-hidden="true" />
         {props.coin.low}
       </span>
@@ -12,7 +15,8 @@ export default function CoinItem(props: any) {
       <Image src='/up.svg' width={20} height={12} alt='' aria-hidden="true" />
         {props.coin.high}
       </span>
-      <span>{convertDate(props.coin.time)}</span>
-      <span>{props.coin.conversionType}</span>
+      <span>
+        {props.coin.conversionType}
+      </span>
     </li>
 }

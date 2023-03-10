@@ -21,7 +21,7 @@ export default function Pagination(props: {
               href="#top" 
               className={page === current ? styles.highlight : styles.page}
               onClick={() => setCurrentPage(page)}
-              aria-label={`page ${page}`}>
+              aria-label={`side ${page} av ${takes}`}>
                 { page }
             </a>
           </li>

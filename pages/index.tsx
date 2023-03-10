@@ -25,7 +25,9 @@ export default function Home() {
           <List />
         </SWRConfig>
       </main>
-      <footer className={styles.footer}><p>footer</p></footer>
+      <footer className={styles.footer}>
+        <p>{new Date().getFullYear()} &copy - Bitcoin valuta</p>
+      </footer>
     </>
   )
 }
