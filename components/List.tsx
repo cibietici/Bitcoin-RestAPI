@@ -25,15 +25,20 @@ export default function List() {
   const reducedData = data?.Data?.Data.slice(startSlice, endSlice)
 
   return <>
-    <ul>
-      {reducedData.map((item: any) => <CoinItem 
-        coin={item} 
-        key={item.high} />) }
-    </ul>
-    <Pagination 
-      current={currentPage} 
-      maxLimit={maxLimit} 
-      totItems={data?.Data?.Data.length} 
-      setCurrentPage={setCurrentPage} />
-    </>
+    <section>
+      <h2 className={styles.h2}>Siste veksling verdi</h2>
+      <ul className={styles.list}>
+        {reducedData.map((item: any) => <CoinItem 
+          coin={item} 
+          key={item.high} />) }
+      </ul>
+    </section>
+    <nav>
+      <Pagination 
+        current={currentPage} 
+        maxLimit={maxLimit} 
+        totItems={data?.Data?.Data.length} 
+        setCurrentPage={setCurrentPage} />
+    </nav>
+  </>  
 }

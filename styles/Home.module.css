@@ -1,13 +1,50 @@
-.main {
+.main, .header, .footer{
   max-width: var(--max-width);
-  margin: 1rem auto;
-  min-height: 100vh;
+  margin: 1rem auto; 
+  background-color: #fff;
+  padding: 0.6rem;
+}
+
+.main {
+  min-height: 80vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.h2 {
+  margin: 1rem 0;
 }
 
 .pagination {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.page {
   color: #000;
 }
 
 .highlight {
   color: red;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.list li span {
+  display: inline-block;
+  width: 6rem;
+}
+
+.list li:nth-child(even) {
+  background-color: darkgray;
 }

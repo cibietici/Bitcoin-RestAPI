@@ -8,18 +8,18 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Crypto-currency</title>
+        <title>Crypto-valuta</title>
         <meta name="description" content="Cryptocurrency" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header><h1>Cryptocurrency</h1></header>
+      <header className={styles.header} id="top"><h1>Crypto-valuta</h1></header>
       <main className={styles.main}>
         <SWRConfig value={{ fetcher: fetchData }}>
           <List />
         </SWRConfig>
       </main>
-      <footer>footer</footer>
+      <footer className={styles.footer}>footer</footer>
     </>
   )
 }

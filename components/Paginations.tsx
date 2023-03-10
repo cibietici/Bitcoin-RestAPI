@@ -13,15 +13,16 @@ export default function Pagination(props: {
   let paginations: Array<number> = Array
     .from({ length: takes }, (value: number, index: number) => index + 1);
 
-  return <ul>
+  return <ul className={styles.pagination}>
       {
-        paginations.map((pagination: number) => {
-          return <li key={pagination}>
+        paginations.map((page: number) => {
+          return <li key={page}>
             <a 
-              href="#" 
-              className={pagination === current ? styles.highlight : styles.pagination}
-              onClick={() => setCurrentPage(pagination)}>
-                { pagination }
+              href="#top" 
+              className={page === current ? styles.highlight : styles.page}
+              onClick={() => setCurrentPage(page)}
+              aria-label={`page ${page}`}>
+                { page }
             </a>
           </li>
         })
