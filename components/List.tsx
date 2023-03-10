@@ -30,7 +30,7 @@ export default function List() {
       <ul className={styles.list}>
         {reducedData.map((item: any) => <CoinItem 
           coin={item} 
-          key={item.high} />) }
+          key={item.time} />) }
       </ul>
     </section>
     <nav>

@@ -1,7 +1,12 @@
+@import './fonts.css';
+
 :root {
   --max-width: 55rem;
   --background: #ddd;
   --foreground: #333;
+  --light-gray: #f1f1f1;
+  --main-color: #F7931A;
+  --secondary-color: #49c754;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +31,9 @@
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Crimson Text', serif;
+  ;
 }
 
 body {
