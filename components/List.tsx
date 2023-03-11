@@ -8,7 +8,8 @@ import styles from '@/styles/Home.module.css'
 import { Coin } from '@/utils/interfaces'
 
 export default function List() {
-  const endPoint = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=100&api_key=${process.env.APIKEY}`
+  
+  const endPoint = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=100&api_key=${process.env.NEXT_PUBLIC_APIKEY}`
   
   const [currentPage, setCurrentPage] = useState(1)
   const maxLimit = 20
