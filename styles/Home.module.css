@@ -43,7 +43,7 @@
   margin: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 940px) {
   .pagination {
     padding: 1.8rem 0;
   }
@@ -60,7 +60,7 @@
   font-size: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 940px) {
   .pagination li {
     display: flex;
     justify-content: center;
@@ -127,21 +127,23 @@
 
 .list li span {
   display: inline-block;
-  width: 6.4rem;
+  width: 7.8rem;
 }
 
 .list li span:nth-child(3), .list li span:nth-child(4) {
   margin-top: 0.6rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 580px) {
+  .list li span:nth-child(3), .list li span:nth-child(4) {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 940px) {
   .list li span {
     display: inline-block;
     width: 6.8rem;
-  }
-
-  .list li span:nth-child(3), .list li span:nth-child(4) {
-    margin-top: 0;
   }
 
   .list li span:nth-child(2) {
