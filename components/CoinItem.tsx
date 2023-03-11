@@ -1,7 +1,8 @@
 import { convertDate } from '@/utils/utils'
 import Image from 'next/image'
+import { Coin } from '@/utils/interfaces'
 
-export default function CoinItem(props: any) {
+export default function CoinItem( props: {coin: Coin}) {
 
   return <li>
       <span>

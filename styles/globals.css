@@ -8,6 +8,7 @@
   --main-color: #fea63a;
   --secondary-color: #ffd48e;
   --shadow: 0.08rem 0.08rem 0.56rem #777777;
+  --warning: #d41010;
 }
 
 @media (prefers-color-scheme: dark) {

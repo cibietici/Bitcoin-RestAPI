@@ -18,7 +18,7 @@ export default function Home() {
         <figure>
           <Image src='./logo.svg' alt="Logo Bitcoin" width={80} height={80}  />
         </figure>
-        <h1 className={styles.h1}>Bitcoin - siste 100 dager</h1>
+        <h1 className={styles.h1}>Bitcoin - Siste 100 dager</h1>
       </header>
       <main className={styles.main}>
         <SWRConfig value={{ fetcher: fetchData }}>
@@ -26,7 +26,7 @@ export default function Home() {
         </SWRConfig>
       </main>
       <footer className={styles.footer}>
-        <p>{new Date().getFullYear()} &copy - Bitcoin valuta</p>
+        <p>{new Date().getFullYear()} - &copy; Bitcoin valuta</p>
       </footer>
     </>
   )

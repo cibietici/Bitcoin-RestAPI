@@ -16,6 +16,7 @@
 
 .footer p {
   margin: 2rem;
+  font-size: 1.2rem;
 }
 
 .main {
@@ -140,4 +141,15 @@
 .list li:nth-child(even):hover {
   background-color: var(--secondary-color);
   box-shadow: var(--shadow);
+}
+
+.error {
+  background-color: var(--warning);
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.loading {
+  font-size: 1.8rem;
 }
