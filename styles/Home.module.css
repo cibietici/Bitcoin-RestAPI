@@ -130,6 +130,10 @@
   width: 7.8rem;
 }
 
+.list li span:nth-child(2) {
+  width: 20rem;
+}
+
 .list li span:nth-child(3), .list li span:nth-child(4) {
   margin-top: 0.6rem;
 }
