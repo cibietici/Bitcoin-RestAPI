@@ -18,7 +18,7 @@ export default function Home() {
         <figure>
           <Image src='./logo.svg' alt="Logo Bitcoin" width={80} height={80}  />
         </figure>
-        <h1 className={styles.h1}>Bitcoin - Siste 100 dager</h1>
+        <h1 className={styles.h1}>Bitcoin</h1>
       </header>
       <main className={styles.main}>
         <SWRConfig value={{ fetcher: fetchData }}>

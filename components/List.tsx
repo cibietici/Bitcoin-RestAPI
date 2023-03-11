@@ -14,7 +14,7 @@ export default function List() {
   const maxLimit = 20
 
   const { data, isValidating, error } = useSWR(endPoint)
-  console.log(error)
+ 
   if (error) {
     return <Error error={error.message} />
   }
@@ -32,7 +32,7 @@ export default function List() {
 
   return <>
     <section>
-      <h2 className={styles.h2}>Siste veksling verdi</h2>
+      <h2 className={styles.h2}>Siste 100 dager verdier</h2>
       <ul className={styles.list}>
         {splittedData.map((coin: Coin) => <CoinItem 
           coin={coin} 

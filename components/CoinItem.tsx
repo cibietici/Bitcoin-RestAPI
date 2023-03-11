@@ -5,18 +5,18 @@ import { Coin } from '@/utils/interfaces'
 export default function CoinItem( props: {coin: Coin}) {
 
   return <li>
-      <span>
+      <time aria-label='verdi dato'>
         {convertDate(props.coin.time)}
-      </span>
-      <span>
+      </time>
+      <span aria-label='tap verdi'>
         <Image src='/down.svg' width={20} height={12} alt='' aria-hidden="true" />
         {props.coin.low}
       </span>
-      <span>
+      <span aria-label='opptjent verdi'>
       <Image src='/up.svg' width={20} height={12} alt='' aria-hidden="true" />
         {props.coin.high}
       </span>
-      <span>
+      <span aria-label='konverteringstype'>
         {props.coin.conversionType}
       </span>
     </li>

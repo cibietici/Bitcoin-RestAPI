@@ -1,7 +1,6 @@
 export default async function fetchData(url: string) {
   const response: Response = await fetch(url);
 
-  console.log(response)
   if (response.ok) {
     return await response.json();
   } else if (response.status === 404) {
