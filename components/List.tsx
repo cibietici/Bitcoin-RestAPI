@@ -6,15 +6,14 @@ import { useState } from 'react'
 import CoinItem from './CoinItem'
 import styles from '@/styles/Home.module.css'
 import { Coin } from '@/utils/interfaces'
+import * as config from '../utils/config'
 
 export default function List() {
   
-  const endPoint = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=100&api_key=${process.env.NEXT_PUBLIC_APIKEY}`
-  
+  const endPoint = `${config.url}?fsym=${config.crypto}&tsym=${config.valuta}&limit=${config.dayLimit}&api_key=${process.env.NEXT_PUBLIC_APIKEY}`
   const [currentPage, setCurrentPage] = useState(1)
-  const maxLimit = 20
 
-  const { data, isValidating, error } = useSWR(endPoint)
+  const { data, error } = useSWR(endPoint)
  
   if (error) {
     return <Error error={error.message} />
@@ -22,8 +21,8 @@ export default function List() {
   if (!data) {
     return <Loader />
   }
-  const endSlice: number = currentPage * maxLimit
-  const startSlice: number = endSlice - maxLimit
+  const endSlice: number = currentPage * config.pageLimit
+  const startSlice: number = endSlice - config.pageLimit
  
   const splittedData: Array<Coin> = data?.Data?.Data
     .sort((a: Coin, b: Coin) => {
@@ -44,7 +43,7 @@ export default function List() {
     <nav>
       <Pagination 
         current={currentPage} 
-        maxLimit={maxLimit} 
+        maxLimit={config.pageLimit} 
         totItems={data?.Data?.Data.length} 
         setCurrentPage={setCurrentPage} />
     </nav>
