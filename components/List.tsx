@@ -37,7 +37,8 @@ export default function List() {
       <ul className={styles.list}>
         {splittedData.map((coin: Coin) => <CoinItem 
           coin={coin} 
-          key={coin.time} />) }
+          key={coin.time} />)
+        }
       </ul>
     </section>
     <nav>

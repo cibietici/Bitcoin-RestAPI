@@ -16,7 +16,11 @@ export default function Home() {
       </Head>
       <header className={styles.header} id="top">
         <figure>
-          <Image src='./logo.svg' alt="Logo Bitcoin" width={80} height={80}  />
+          <Image 
+            src='./logo.svg' 
+            alt="Logo Bitcoin" 
+            width={80} 
+            height={80}  />
         </figure>
         <h1 className={styles.h1}>Bitcoin</h1>
       </header>
@@ -26,7 +30,9 @@ export default function Home() {
         </SWRConfig>
       </main>
       <footer className={styles.footer}>
-        <p>{new Date().getFullYear()} - &copy; Bitcoin valuta</p>
+        <p>
+          {new Date().getFullYear()} - 
+          &copy; Bitcoin valuta</p>
       </footer>
     </>
   )

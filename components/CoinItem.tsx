@@ -12,11 +12,20 @@ export default function CoinItem( props: {coin: Coin}) {
         {props.coin.conversionType}
       </span>
       <span aria-label='tap verdi'>
-        <Image src='/down.svg' width={20} height={12} alt='' aria-hidden="true" />
+        <Image src='/down.svg' 
+          width={20} 
+          height={12} 
+          alt='' 
+          aria-hidden="true" />
         {props.coin.low}
       </span>
       <span aria-label='opptjent verdi'>
-      <Image src='/up.svg' width={20} height={12} alt='' aria-hidden="true" />
+      <Image 
+        src='/up.svg' 
+        width={20} 
+        height={12} 
+        alt='' 
+        aria-hidden="true" />
         {props.coin.high}
       </span>
     </li>

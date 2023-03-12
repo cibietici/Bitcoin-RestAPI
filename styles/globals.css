@@ -23,12 +23,6 @@
   }
 }
 
-@media (prefers-reduced-motion) {
-  * {
-    animation-duration: 0.001ms;
-  }
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -41,6 +35,15 @@ body {
   scroll-behavior: smooth;
   font-family: 'Crimson Text', serif;
   ;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    animation-duration: 0.001ms;
+  }
+  html, body {
+    scroll-behavior: unset;
+  }
 }
 
 body {
