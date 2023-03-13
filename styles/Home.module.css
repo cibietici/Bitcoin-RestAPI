@@ -65,7 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.08rem dotted var(--medium-gray);
+    border: 0.08rem solid var(--medium-gray);
     background-color: var(--white);
     width: 5rem;
     height: 5rem;
@@ -110,7 +110,7 @@
   padding: 1.8rem;
   margin: 0.8rem 0;
   border: 0.05rem solid transparent;
-  border-bottom: 0.14rem dotted var(--main-color);
+  border-bottom: 0.14rem dotted var(--dark-gray);
   background-color: var(--white);
   transition: all 0.5s;
   font-size: 1.2rem;

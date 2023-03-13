@@ -16,13 +16,6 @@
   --black: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #ddd;
-    --background: #333;
-  }
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -54,10 +47,4 @@ body {
 body {
   color: var(--foreground);
   background-color: var(--background);
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

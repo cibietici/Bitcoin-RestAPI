@@ -10,7 +10,7 @@ export default function Pagination(props: {
   const {current, maxLimit, totItems, setCurrentPage} = props
   const takes: number = Math.ceil(totItems/maxLimit)
 
-  let paginations: Array<number> = Array
+  const paginations: Array<number> = Array
     .from({ length: takes }, (value: number, index: number) => index + 1);
 
   return <ul className={styles.pagination}>
