@@ -1,4 +1,5 @@
-export default async function fetchData(url: string) {
+import { Welcome } from "./interfaces";
+export default async function fetchData(url: string): Promise<Welcome>  {
   const response: Response = await fetch(url);
 
   if (response.ok) {
